@@ -1,38 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.www.rplbo.demo.play">
+<AnchorPane prefHeight="649.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.ukdw.www.rplbo.demo.play">
    <children>
+      <Text layoutX="195.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Guyss">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+
+      <Text layoutX="63.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gedung A">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+
       <TextField fx:id="inputA" layoutX="63.0" layoutY="133.0" prefHeight="32.0" prefWidth="207.0" promptText="Masukkan Nomor Gedung" />
+
+      <Text layoutX="63.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gedung B">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+
       <TextField fx:id="inputB" layoutX="63.0" layoutY="222.0" prefHeight="32.0" prefWidth="207.0" promptText="Masukkan Nomor Gedung" />
-      <Button layoutX="400.0" layoutY="313.0" onAction="#handleCariJalur" prefHeight="39.0" prefWidth="101.0" text="Cari Jalur" />
-      <Label fx:id="labelHasil" />
 
-      <Text layoutX="195.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Guyss" wrappingWidth="144.13671875">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
+      <TextArea fx:id="textAreaHasil" layoutX="63.0" layoutY="471.0" prefHeight="116.0" prefWidth="526.0" />
 
+      <TextArea fx:id="textAreaHasil1" editable="false" layoutX="408.0" layoutY="23.0" prefHeight="219.0" prefWidth="187.0" text="1 Agape&#10;2 Biblos&#10;3 Chara&#10;4 Didaktos&#10;5 Euodia&#10;6 Filia&#10;7 Gnosis&#10;8 Hagios&#10;9 Iama&#10;10 Koinonia&#10;11 Logos&#10;12 Makarios" wrapText="true" />
 
-      <Text layoutX="63.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gedung A" wrappingWidth="144.13671875">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="63.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gedung B" wrappingWidth="144.13671875">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <TextArea fx:id="textAreaHasil" layoutX="51.0" layoutY="359.0" prefHeight="116.0" prefWidth="450.0" />
-      <TextArea fx:id="textAreaHasil1" layoutX="314.0" layoutY="79.0" prefHeight="219.0" prefWidth="187.0" text="1 Agape  &#10;2 Biblos  &#10;3 Chara  &#10;4 Didaktos  &#10;5 Euodia  &#10;6 Filia  &#10;7 Gnosis  &#10;8 Hagios  &#10;9 Iama  &#10;10 Koinonia  &#10;11 Logos  &#10;12 Makarios" />
+            <Button fx:id="btnCari" layoutX="487.0" layoutY="272.0" onAction="#handleCariJalur" prefHeight="39.0" prefWidth="101.0" text="Cari Jalur" />
+      <Pane layoutX="59.0" layoutY="334.0" prefHeight="121.0" prefWidth="526.0">
+         <children>
+            <Circle fx:id="Filia" fill="DODGERBLUE" layoutX="105.0" layoutY="26.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Agape" fill="#1990ff" layoutX="26.0" layoutY="42.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Euodia" fill="DODGERBLUE" layoutX="238.0" layoutY="30.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Didaktos" fill="DODGERBLUE" layoutX="209.0" layoutY="84.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Biblos" fill="DODGERBLUE" layoutX="93.0" layoutY="85.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Logos" fill="DODGERBLUE" layoutX="440.0" layoutY="30.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Hagios" fill="DODGERBLUE" layoutX="342.0" layoutY="54.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Gnosis" fill="DODGERBLUE" layoutX="282.0" layoutY="97.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Chara" fill="DODGERBLUE" layoutX="153.0" layoutY="109.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Makarios" fill="DODGERBLUE" layoutX="387.0" layoutY="97.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Iama" fill="DODGERBLUE" layoutX="440.0" layoutY="97.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Koinonia" fill="DODGERBLUE" layoutX="489.0" layoutY="97.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Line endX="81.0" endY="79.79998779296875" startX="31.0" startY="54.0" />
+            <Line endX="84.0" endY="17.0" layoutX="10.0" layoutY="10.0" startX="28.0" startY="32.0" />
+            <Line endX="119.0" endY="51.0" layoutX="107.0" layoutY="-21.0" startX="10.0" startY="47.0" />
+            <Line endX="70.0" endY="73.0" layoutX="261.0" layoutY="-19.0" startX="-11.0" startY="49.0" />
+            <Line endX="311.0" endY="41.0" layoutX="117.0" layoutY="-11.0" startX="238.0" startY="65.0" />
+            <Line endX="121.0" endY="53.0" layoutX="117.0" layoutY="-11.0" startX="98.0" startY="83.0" />
+            <Line endX="24.0" endY="115.0" layoutX="117.0" layoutY="-11.0" startX="-12.0" startY="96.0" />
+            <Line endX="80.0" endY="101.0" layoutX="117.0" layoutY="-11.0" startX="48.0" startY="120.0" />
+            <Line endX="153.0" endY="103.0" layoutX="117.0" layoutY="-11.0" startX="104.0" startY="95.0" />
+            <Line endX="258.0" endY="108.0" layoutX="117.0" layoutY="-11.0" startX="226.0" startY="77.0" />
+            <Line endX="221.0" endY="75.0" layoutX="117.0" layoutY="-11.0" startX="171.0" startY="96.0" />
+            <Line endX="327.0" endY="52.29290771484375" layoutX="117.0" layoutY="-11.0" startX="372.0" startY="96.0" />
+            <Line endX="323.0" endY="53.0" layoutX="117.0" layoutY="-11.0" startX="326.29296875" startY="96.70709228515625" />
+            <Line endX="312.0" endY="108.0" layoutX="117.0" layoutY="-11.0" startX="282.0" startY="108.0" />
+            <Line endX="348.0" endY="99.0" layoutX="127.0" layoutY="-1.0" startX="325.0" startY="98.0" />
+            <Line endX="159.0" endY="38.0" layoutX="271.0" layoutY="-9.0" startX="-21.70709228515625" startY="38.29290771484375" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
